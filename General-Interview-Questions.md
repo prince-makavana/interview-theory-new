@@ -1,4 +1,4 @@
-1. What is nodejs?
+1. # What is nodejs?
 ANS. Node.js is an open-source JavaScript runtime environment that allows developers to build and run JavaScript code on the server side.
 
 #  What is event driven programming?
@@ -44,7 +44,9 @@ ANS. Lexical scope is the ability for a function scope to access variables from 
 11. # What is hoisting?
 ANS. In JavaScript, hoisting refers to the built-in behavior of the language through which declarations of functions, variables, and classes are moved to the top of their scope – all before code execution
 
-12. How to avoid hoisting?
+Variables declared with var are hoisted but are initialized as undefined until the line of code where the assignment occurs.
+
+12. # How to avoid hoisting?
 ANS. declares all variables at the beginning of the scope
 
 13. # Is nodejs single threaded?
@@ -63,6 +65,7 @@ res.end(‘Hello world’)
 ANS.
 The temporal dead zone (TDZ) is a specific period in the execution of JavaScript code where variables declared with let and const exist but cannot be accessed or assigned any value.
 
+Variables declared with let and const are hoisted but are placed in a "temporal dead zone" (TDZ). This means they cannot be accessed before their declaration is reached
 
 
 16. # What is IIFE?
@@ -91,7 +94,7 @@ ANS. In Pass by value, the function is called by directly passing the value of t
 ANS. In Pass by Reference, Function is called by directly passing the reference/address of the variable as an argument. So changing the value inside the function also change the original value. In JavaScript array and Object follows pass by reference property.
 
 21. # What is Higher order function?
-ANS. We can pass function as a param in function and we can do optimaize our code.
+ANS. We can pass function as a param in function and we can do optimize our code.
 
 22. # What is clustering?
 - Clustering in Node. js involves creating multiple worker processes that share the incoming workload. Each worker process runs in its own event loop, utilizing the available CPU cores. The master process manages the worker processes, distributes incoming requests, and handles process failures
@@ -104,16 +107,28 @@ ANS. Parallelism refers to the execution of multiple tasks simultaneously, utili
 ANS. REST APIs support JSON, XML, and other formats, while Web APIs only support XML
 
 25. What is a procedure in mysql?
-
+ANS. A procedure in MySQL is a stored program that contains a set of SQL statements. It is used to perform a specific task, such as inserting data, updating records, or complex calculations, and can be executed multiple times with different parameters.
 
 26. # What is serverless?
 ANS. Serverless is a cloud-native development model that allows developers to build and run applications without having to manage servers.
 
 27. # Why we are using AWS?
-ANS.
+ANS.Amazon Web Services (AWS) is the world’s leading cloud computing platform that provides a wide range of services for computing, storage, databases, networking, AI/ML, and security.
+Organizations use AWS for
+- scalability
+- cost-effectiveness
+- security
+- high availability.
 
 28. # What is API gateway?
-ANS. Where we can deploy our APIs
+ANS. Key Features of an API Gateway
+🔹 Request Routing – Directs requests to the appropriate backend service.
+🔹 Authentication & Authorization – Secures APIs using JWT, OAuth, API keys, IAM roles.
+🔹 Rate Limiting & Throttling – Controls request flow to prevent overloading.
+🔹 Caching – Stores frequent responses to improve performance.
+🔹 Logging & Monitoring – Tracks API calls and performance using tools like AWS CloudWatch.
+🔹 Load Balancing – Distributes requests among multiple instances.
+🔹 Protocol Translation – Supports REST, WebSockets, gRPC, GraphQL, etc.
 
 29. # What is Encapsulation?
 ANS. Hiding the internal details of an object from other objects and code. In JavaScript, encapsulation is achieved by using closures and access modifiers, such as the private and public keywords.

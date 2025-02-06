@@ -5,7 +5,8 @@
 
 ### template literals
 `My name is ${firstName} ${lastName}`
-### destructuring array and object 
+### destructuring array and object
+- const { name, email } = obj
 ### enhanced object literals
 ### Promises
 

@@ -83,3 +83,18 @@ populate in mongoose
 1) Difference between thread pool and event loop?
 2) How to change expiration time of jwt token?
 3) what is singleton class?
+
+### valuelabs
+
+singleton design pattern
+solid principals
+sql injection
+sharding
+fork
+
+### Pure software
+
+how can we upload 100s GB file using API?
+how can we handle crores request? - load balancer
+how can we implement horizontal scaling and vertical scaling?
+how can we deploy our app without downtime?

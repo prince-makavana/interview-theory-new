@@ -6,7 +6,7 @@
  * Promise.all - return error only | return all resolved promises
  * Promise.any - return if any one first promises are resolve
  * Promise.allSettled - return all promises with status if resolved or rejected
- * Promise.race - What ever first promise resolve return that
+ * Promise.race - What ever first promise resolve/rejected return that
  * 
  * Promise status as below
  * - Pending
@@ -25,10 +25,12 @@ const slowlyPromise = new Promise((resolve, reject) => {
 })
 
 const rejectionPromise = new Promise((resolve, reject) => {
-  reject('Rejected promise.')
+  setTimeout(() => {
+    reject('Rejected promise.')
+  }, 500);
 })
 
-Promise.all([slowlyPromise, quickPromise, rejectionPromise])
+Promise.race([slowlyPromise, quickPromise, rejectionPromise])
   .then((value) => {
     console.log('===RESOLVED===', value);
   })

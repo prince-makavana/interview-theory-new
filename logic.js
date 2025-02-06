@@ -72,8 +72,8 @@ function printNumber() {
   let sum = 0
   for (let i = 1; i < 10; i++) {
     sum += i
-    setInterval(() => {
-      console.log(i);
+    setTimeout(() => {
+      console.log('===printNumber====', i);
     }, sum * 1000);
   }
 }
@@ -126,13 +126,13 @@ function outer() {
 // closureFunc();
 
 
-function outer() {
+function outerTwo() {
   var x = 0;
   setTimeout(() => {
     x++;
   }, 1000);
 }
-// console.log(outer());
+console.log('outerTwo', outerTwo());
 
 function computeClosestToZero(ts) {
   // Write your code here
@@ -314,7 +314,7 @@ c = { key: 3 }
 a[b] = 123
 a[c] = 456
 
-console.log(a[b]);
+console.log('======a[b]>>>>>>', a[b]); // 456
 
 /**
  * Buffer
@@ -330,3 +330,21 @@ function testFunction(...param) {
   console.log(param);
 }
 testFunction(1, 2, 3)
+
+
+/**
+ * fetch query param using javascript functions
+ */
+const strData = 'www.abc.com?name=prince&email=princemakavana@gmail.com'
+
+function getParamVal(str) {
+    const resObj = {}
+    let queryParams = str.replace('www.abc.com?', '').split('&')
+    queryParams = queryParams.map(value => {
+        const[key, val] = value.split('=')
+        resObj[key] = val
+    })
+    console.log(resObj);
+}
+
+getParamVal(strData)

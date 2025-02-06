@@ -1,7 +1,7 @@
 # Advantages and Disadvantage of multitenancy
 
 ## Advantages
-1) Costs - Multi tenant operation has lower const per user due to resources being shared  
+1) Costs - Multi tenant operation has lower cost per user due to resources being shared  
 2) Efficiency: Since the environment is the same for each customer, onboarding new customers is a faster process.
 
 ## Disadvantages

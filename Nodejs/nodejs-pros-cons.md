@@ -9,6 +9,6 @@
 
 ## Cons
 
-1) Perfrmance reduce with heavy computational task
+1) Performance reduce with heavy computational task
 2) Unstable APIs - Due to its rapid development cycle, breaking changes between versions and requiring frequent update
 3) Limited CPU intensive operations - Nodejs is not suitable for CPU intensive task as its single threaded. CPU bound task can block the eventloop causing the delays in processing other request.

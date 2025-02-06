@@ -6,3 +6,9 @@ they offer 15 lpa - OK
 
 lucent - 13 lpa will callback him
 mobiquity - hexaware - 16/04 11AM - 15 lpa
+
+==================
+
+Infosys - 20 LPA
+Volkswagon - 20 LPA
+Zemoso labs - 20 LPA
