@@ -18,7 +18,7 @@
 3) typeof {name: 'prince'} === {name: 'prince'} -> false
 
 ## JS Concepts
-1) What is closures?
+1) # What is closures?
 - A closure is the combination of a function bundled(enclosed) together with its lexical environment within which that function was declared. i.e, It is an inner function that has access to the outer or enclosing function’s variables, functions and other data even after the outer function has finished its execution.
     The closure has three scope chains.
 
@@ -26,14 +26,14 @@
     - Outer function's variables
     - Global variables
 
-2) What is hoisting?
+2) # What is hoisting?
 - Hoisting is a JavaScript mechanism where variables, function declarations and classes are moved to the top of their scope before code execution. Remember that JavaScript only hoists declarations, not initialisation. Let's take a simple example of variable hoisting,
 
 - Variables declared with var are hoisted but initialized as undefined.
 
 - Variables declared with let and const are hoisted but exist in the Temporal Dead Zone (TDZ) and cannot be accessed until the declaration line is executed
 
-3) What is promise?
+3) # What is promise?
 - A promise is an object that may produce a single value some time in the future with either a resolved value or a reason that it’s not resolved(for example, network error). It will be in one of the 3 possible states: fulfilled, rejected, or pending.
 
 4) # Difference between promises and callback

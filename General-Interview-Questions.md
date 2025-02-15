@@ -106,7 +106,7 @@ ANS. Parallelism refers to the execution of multiple tasks simultaneously, utili
 24. # What is the difference between APIs and REST APIs?
 ANS. REST APIs support JSON, XML, and other formats, while Web APIs only support XML
 
-25. What is a procedure in mysql?
+25. # What is a procedure in mysql?
 ANS. A procedure in MySQL is a stored program that contains a set of SQL statements. It is used to perform a specific task, such as inserting data, updating records, or complex calculations, and can be executed multiple times with different parameters.
 
 26. # What is serverless?
@@ -163,6 +163,40 @@ ANS.
 45. # What Is AWS S3 Replication?
 ANS.
 
+46. # What is process.nexttick()?
+ANS. process. nextTick is used to ensure an asynchronous operation is completed before other asynchronous operations begin. For example, it can guarantee that an event is emitted or a callback is executed after an operation is completed, but before other events or callbacks are processed
+
+47. # how can i do log after send response?
+ANS. you can use the finish or close event on the response object
+
+Ex.1 
+app.use((req, res, next) => {
+    res.on('finish', () => {
+        console.log(`Response sent: ${res.statusCode} ${req.method} ${req.url}`);
+    });
+    next();
+});
+
+Ex 2.
+res.on('close', () => {
+    console.log(`Connection closed before response fully sent: ${req.method} ${req.url}`);
+});
+
+48. # What is populate in mongoose?
+ANS. populate() replaces ObjectIds with actual documents.
+
+49. # How can we add rate limit in nodejs?
+ANS. const rateLimit = require('express-rate-limit');
+const limiter = rateLimit({
+    windowMs: 15 * 60 * 1000, // 15 minutes
+    max: 100, // limit each IP to 100 requests per windowMs
+    message: "Too many requests, please try again later."
+});
+app.use(limiter);
+
+
+### Topics
+
 - Prevent ddos attack – rate limit
 - Deep copy and shalow copy
 - Vertical scaling and horizontal scaling
@@ -170,7 +204,9 @@ ANS.
 
 
 - Fibonacci series
-- Put and patch diff
+- # Put and patch diff
+ANS. PUT is for full replacement, and PATCH is for partial updates
+
 - Normalization
 - Caching use in nodejs
 

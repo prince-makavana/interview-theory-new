@@ -4,7 +4,12 @@
 
 1) Unstructured, semi structured or document oriented data
 2) Flexibility in schema - If you want flexibility in schema then use mongodb
-3) Horizontal scaling is major requirement 
+3) Horizontal scaling is major requirement
+
+❌ Avoid MongoDB if:
+
+1. Your data has strong relationships (like banking, transactions).
+2. You require ACID transactions (strict consistency).
 
 ## MySQL (sequelize (ORM - Object Relational Mapper))
 
@@ -12,3 +17,8 @@
 2) Complex queries - If your app is relies heavily on complex queries then mysql is suitable for you.
 3) If your app is heavily relies on complex joins the you should choose mysql
 4) Horizontal scaling more complex
+
+❌ Avoid MySQL if:
+
+1. You need to store large amounts of unstructured data (MongoDB is better for flexible schemas).
+2. You require high-speed, real-time processing for big data.
