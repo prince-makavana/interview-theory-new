@@ -87,10 +87,10 @@ populate in mongoose
 ### valuelabs
 
 singleton design pattern
-solid principals
-sql injection
-sharding
-fork
+**solid principals** - SOLID is a set of five design principles that help software developers create maintainable, scalable, and flexible code.
+**sql injection** - most common hacking technique for destroy database
+**sharding**
+**fork**
 
 ### Pure software
 
@@ -98,3 +98,6 @@ how can we upload 100s GB file using API?
 how can we handle crores request? - load balancer
 how can we implement horizontal scaling and vertical scaling?
 how can we deploy our app without downtime?
+
+
+unknown and never

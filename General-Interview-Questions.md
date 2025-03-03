@@ -122,13 +122,13 @@ Organizations use AWS for
 
 28. # What is API gateway?
 ANS. Key Features of an API Gateway
-🔹 Request Routing – Directs requests to the appropriate backend service.
-🔹 Authentication & Authorization – Secures APIs using JWT, OAuth, API keys, IAM roles.
-🔹 Rate Limiting & Throttling – Controls request flow to prevent overloading.
-🔹 Caching – Stores frequent responses to improve performance.
-🔹 Logging & Monitoring – Tracks API calls and performance using tools like AWS CloudWatch.
-🔹 Load Balancing – Distributes requests among multiple instances.
-🔹 Protocol Translation – Supports REST, WebSockets, gRPC, GraphQL, etc.
+🔹 Request Routing - Directs requests to the appropriate backend service.
+🔹 Authentication & Authorization - Secures APIs using JWT, OAuth, API keys, IAM roles.
+🔹 Rate Limiting & Throttling - Controls request flow to prevent overloading.
+🔹 Caching - Stores frequent responses to improve performance.
+🔹 Logging & Monitoring - Tracks API calls and performance using tools like AWS CloudWatch.
+🔹 Load Balancing - Distributes requests among multiple instances.
+🔹 Protocol Translation - Supports REST, WebSockets, gRPC, GraphQL, etc.
 
 29. # What is Encapsulation?
 ANS. Hiding the internal details of an object from other objects and code. In JavaScript, encapsulation is achieved by using closures and access modifiers, such as the private and public keywords.
@@ -218,6 +218,9 @@ ANS. PUT is for full replacement, and PATCH is for partial updates
 
 - what is event emmiter?
 - what is spawn and fork?
+ANS. fork is specifically designed for creating new Node.js processes.
+Spawn is a general-purpose method for launching external commands or processes.
+
 - what is closure?
 - what is hoisting?
 - package.json
@@ -240,3 +243,81 @@ ANS. PUT is for full replacement, and PATCH is for partial updates
     2.  Readable - Streams from which data can be read
     3.  Duplex - Strems that are both can do readable and writable
     4.  transform - Duplex streams that can be modify or transform the data
+
+ - What is the use of process?
+ - Difference between NULL and undefined?
+Ans. undefined means variable has been declared but not assigned any value
+ - What is this?
+
+
+abc -> ['abc', 'bca', 'cab', 'cba', 'acb', 'bac']
+
+
+
+    const a = [{id:1, name:"sachin" }, {id:2, name:"sachin" }]
+ 
+a.find(item=>item.name==="sachin")
+ 
+a.filter(item=>item.name==="sachin")
+[{id: 1, name:"sachin"}] [{id:1, name:"sach... by 
+
+
+[{id: 1, name:"sachin"}]
+[{id:1, name:"sachin" }, {id:2, name:"sachin" }]
+Const a = { id: 10 }; Const b = a; b.id = 2... by Sunil .
+<!-- Sunil .
+4:26 PM -->
+Const a = { id: 10 };
+Const b = a;
+b.id = 20;
+console.log("a", a);
+console.log("b", b);
+var arr = [2,0,1,8,24]; by Sunil .
+<!-- Sunil .
+4:28 PM -->
+var arr = [2,0,1,8,24];
+var arr = [2,0,1,8,24];   function sortArr(... by 
+<!-- 4:37 PM -->
+
+var arr = [2,0,1,8,24];
+ 
+function sortArr(unsortArr) {
+    let IsUnsort = true;
+    while(IsUnsort) {
+        IsUnsort = false
+        for(let i = 0; i < unsortArr.length; i++) {
+            if(unsortArr[i] < unsortArr[i+1]) {
+                IsUnsort = true
+                const val1 = unsortArr[i];
+                unsortArr[i] = unsortArr[i+1];
+                unsortArr[i+1] = val1;
+            }
+        }
+    }
+    return unsortArr;
+}
+ 
+console.log(sortArr(arr))
+var arr = [2, 3,0,5,1]; by Sunil .
+<!-- Sunil .
+4:37 PM -->
+var arr = [2, 3,0,5,1];
+var arr = [2, 3,0,5,1];   function findSeco... by 
+<!-- 4:42 PM -->
+
+var arr = [2, 3,0,5,1];
+ 
+function findSecondHighest(orgArr) {
+    let highestValue = orgArr[0];
+    let secondHighestValue = orgArr[1];
+    for(let i = 0; i < orgArr.length; i++) {
+        if(orgArr[i] > highestValue) {
+            secondHighestValue = highestValue;
+            highestValue = orgArr[i]
+        }
+    }
+    return secondHighestValue;
+}
+ 
+console.log(findSecondHighest(arr))
+has context menu
