@@ -99,5 +99,5 @@ how can we handle crores request? - load balancer
 how can we implement horizontal scaling and vertical scaling?
 how can we deploy our app without downtime?
 
-
-unknown and never
+congnizant
+- Promise

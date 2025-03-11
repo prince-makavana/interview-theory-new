@@ -166,6 +166,24 @@ ANS.
 46. # What is process.nexttick()?
 ANS. process. nextTick is used to ensure an asynchronous operation is completed before other asynchronous operations begin. For example, it can guarantee that an event is emitted or a callback is executed after an operation is completed, but before other events or callbacks are processed
 
+```
+console.log("Start");
+
+setImmediate(() => console.log("Set Immediate"));
+
+process.nextTick(() => console.log("Next Tick"));
+
+console.log("End");
+```
+
+OUTPUT----
+
+Start
+End
+Next Tick
+Set Immediate
+
+
 47. # how can i do log after send response?
 ANS. you can use the finish or close event on the response object
 
@@ -265,59 +283,3 @@ a.filter(item=>item.name==="sachin")
 [{id: 1, name:"sachin"}]
 [{id:1, name:"sachin" }, {id:2, name:"sachin" }]
 Const a = { id: 10 }; Const b = a; b.id = 2... by Sunil .
-<!-- Sunil .
-4:26 PM -->
-Const a = { id: 10 };
-Const b = a;
-b.id = 20;
-console.log("a", a);
-console.log("b", b);
-var arr = [2,0,1,8,24]; by Sunil .
-<!-- Sunil .
-4:28 PM -->
-var arr = [2,0,1,8,24];
-var arr = [2,0,1,8,24];   function sortArr(... by 
-<!-- 4:37 PM -->
-
-var arr = [2,0,1,8,24];
- 
-function sortArr(unsortArr) {
-    let IsUnsort = true;
-    while(IsUnsort) {
-        IsUnsort = false
-        for(let i = 0; i < unsortArr.length; i++) {
-            if(unsortArr[i] < unsortArr[i+1]) {
-                IsUnsort = true
-                const val1 = unsortArr[i];
-                unsortArr[i] = unsortArr[i+1];
-                unsortArr[i+1] = val1;
-            }
-        }
-    }
-    return unsortArr;
-}
- 
-console.log(sortArr(arr))
-var arr = [2, 3,0,5,1]; by Sunil .
-<!-- Sunil .
-4:37 PM -->
-var arr = [2, 3,0,5,1];
-var arr = [2, 3,0,5,1];   function findSeco... by 
-<!-- 4:42 PM -->
-
-var arr = [2, 3,0,5,1];
- 
-function findSecondHighest(orgArr) {
-    let highestValue = orgArr[0];
-    let secondHighestValue = orgArr[1];
-    for(let i = 0; i < orgArr.length; i++) {
-        if(orgArr[i] > highestValue) {
-            secondHighestValue = highestValue;
-            highestValue = orgArr[i]
-        }
-    }
-    return secondHighestValue;
-}
- 
-console.log(findSecondHighest(arr))
-has context menu
