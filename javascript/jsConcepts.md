@@ -73,3 +73,5 @@
 4) How can i reduce load of my application?
 5)  When should i use aggregate in mongodb?
 6)  what is singleton class?
+7) What is object?
+8) Object methods?

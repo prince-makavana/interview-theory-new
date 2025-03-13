@@ -20,3 +20,18 @@ function identity<T>(value: T): T {
 
 const numberIdentity = identity(10); // numberIdentity: number
 const stringIdentity = identity("Hello"); // stringIdentity: string
+
+/**
+ * Define type
+ */
+
+type Person = {
+    name: string;
+    age: number;
+    height?: number; // height is optional
+};
+
+const people: Person[] = [
+    { name: 'ram', age: 30 },
+    { name: 'ram', age: 30, height: 6 },
+];

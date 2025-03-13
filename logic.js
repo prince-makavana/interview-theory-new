@@ -338,13 +338,37 @@ testFunction(1, 2, 3)
 const strData = 'www.abc.com?name=prince&email=princemakavana@gmail.com'
 
 function getParamVal(str) {
-    const resObj = {}
-    let queryParams = str.replace('www.abc.com?', '').split('&')
-    queryParams = queryParams.map(value => {
-        const[key, val] = value.split('=')
-        resObj[key] = val
-    })
-    console.log(resObj);
+  const resObj = {}
+  let queryParams = str.replace('www.abc.com?', '').split('&')
+  queryParams = queryParams.map(value => {
+    const [key, val] = value.split('=')
+    resObj[key] = val
+  })
+  console.log(resObj);
 }
 
 getParamVal(strData)
+
+/**
+ * Find the largest string from string
+ */
+
+function longestSubstring(str) {
+  const longestStr = []
+  let resArr = []
+
+  const strArr = str.split('')
+  for (let i = 0; i < strArr.length; i++) {
+    if (!resArr.includes(strArr[i])) {
+      resArr.push(strArr[i])
+    } else {
+      longestStr.push(resArr.join(''))
+      resArr = []
+      resArr.push(strArr[i])
+    }
+  }
+  longestStr.push(resArr.join(''))
+  return longestStr.sort((a, b) => b.length - a.length)[0]
+}
+
+// console.log(longestSubstring('PriPPrincePrin'))
