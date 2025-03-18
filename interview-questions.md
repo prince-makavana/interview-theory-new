@@ -101,3 +101,27 @@ how can we deploy our app without downtime?
 
 congnizant
 - Promise
+
+## Poonawalefincorp
+1) What is microservice architecture?
+2) How can we implement/split e-commerce website with microservice architecture?
+3) What is middleware?
+4) Ouput or below code
+var x = 0;
+for (let i = 0; i < 5; i++) {
+  setTimeout(() => {
+    x++;
+    console.log(x);
+  }, 1000);
+}
+5) Output of below code? and what is that?
+const arr1 = [1,2,3]
+const arr2 = [4,5,6]
+const arr3 = [...arr1, ...arr2]
+console.log(arr3)
+6) Have you ever work with nest.js?
+7) Have you experince in typescript?
+8) What is the difference between microservice and monolithic architecture?
+9) Javascript is single threaded or multi threaded?
+10) Javascript is single threaded then how its works?
+11) What is Higher order function?
