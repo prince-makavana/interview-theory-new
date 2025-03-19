@@ -267,19 +267,61 @@ Spawn is a general-purpose method for launching external commands or processes.
 Ans. undefined means variable has been declared but not assigned any value
  - What is this?
 
-
 abc -> ['abc', 'bca', 'cab', 'cba', 'acb', 'bac']
 
-
-
-    const a = [{id:1, name:"sachin" }, {id:2, name:"sachin" }]
+### Difference between find and filter.
+const a = [{id:1, name:"sachin" }, {id:2, name:"sachin" }]
  
 a.find(item=>item.name==="sachin")
- 
+ANS. {id: 1, name:"sachin"}
+
 a.filter(item=>item.name==="sachin")
-[{id: 1, name:"sachin"}] [{id:1, name:"sach... by 
+ANS. [{id: 1, name:"sachin"}] [{id:1, name:"sach... by 
+
+### What is memory leak?
+
+### What is libuv?
 
 
-[{id: 1, name:"sachin"}]
-[{id:1, name:"sachin" }, {id:2, name:"sachin" }]
-Const a = { id: 10 }; Const b = a; b.id = 2... by Sunil .
+
+# 1st -> settimeout 3 sec
+# 2nd - promise 5 sec
+# 3 -> 8 to 10 sec
+
+
+## Find nearest to zero value
+const intArr = [2, 5, 9, -3, 6, -4]
+
+function findNearestToZero(arr) {
+    const resArr = [];
+    const sumOfValues = [];
+    for(let i = 0; i < arr.length; i++) {
+        for(let j = i+1; j < arr.length; j++) {
+            sumOfValues.push(arr[i] + arr[j])
+            resArr.push([arr[i], arr[j]])
+        }
+    }
+    const nearestToZero = [1,-1]
+    const nearestIndex = sumOfValues.filter((value, index) => {
+        if (nearestToZero.includes(value)) {
+            // console.log('nearestIndex', index)
+            return index
+        }
+    })
+    console.log(nearestIndex)
+    return resArr[nearestIndex]
+}
+
+console.log(findNearestToZero(intArr))
+
+
+## Find highest n number of value
+const intArr = [2,5,10,3,8,1,11,2,5,3]
+
+function findnthHighestValue(arr, nthHighestValue) {
+    const resSet = new Set(arr)
+    const uniqueArr = [...resSet]
+    return uniqueArr.sort((a,b) => b-a)[nthHighestValue-1]
+}
+
+console.log(findnthHighestValue(intArr, 5))
