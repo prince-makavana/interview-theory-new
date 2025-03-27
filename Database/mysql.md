@@ -42,3 +42,14 @@
    2. Consistency => Ensures that transactions only bring the database from one valid state to another.
    3. Isolation => Concurrent trasactions, those happening at the same time, do not interfere with each other, Each transaction appear to be isolated from each other, even if they are accessing the same data, this prevents data corruption that could occur if multiple transactions tried to modified the same data.
    4. Durability => Once the transaction changes commited, the the changes made to the database become parmenant. 
+
+7. # What is SQL injection?
+- 
+
+8. # How can we prevent sql injection?
+- 
+
+9. # How can we perform joins in sequelize?
+- 
+
+10. # 

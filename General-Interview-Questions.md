@@ -355,3 +355,6 @@ function findnthHighestValue(arr, nthHighestValue) {
 }
 
 console.log(findnthHighestValue(intArr, 5))
+
+# What is Cucumber?
+
