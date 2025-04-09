@@ -86,6 +86,7 @@ IIFE means Initiate invoke functional expression, a function that is called imme
     - Global variables
 
 18. # What is Call, Bind and Apply?
+ANS. In JavaScript, call(), bind(), and apply() are methods that allow you to control the this context and call functions with specific arguments.
 
 19. # What is PassByValue?
 ANS. In Pass by value, the function is called by directly passing the value of the variable as an argument. So any changes made inside the function do not affect the original value.
@@ -234,8 +235,8 @@ ANS. PUT is for full replacement, and PATCH is for partial updates
 - How to create apis only using nodejs
 - Create database design for one to one chat app
 
-- what is event emmiter?
-- what is spawn and fork?
+- # what is event emmiter?
+- # what is spawn and fork?
 ANS. fork is specifically designed for creating new Node.js processes.
 Spawn is a general-purpose method for launching external commands or processes.
 
@@ -247,9 +248,9 @@ Spawn is a general-purpose method for launching external commands or processes.
 - use of ^
 - jwt token
   - parts of jwt token
-    - Header
-    - Payload
-    - Verify Signature
+    - Header - Type of token and algoritham we have used.
+    - Payload - Contains data of users.
+    - Verify Signature - Secret token/signature which is made from combination of header and payload.
 
 1.  DRY and KISS principle
     - Dont Repeat Yourself
@@ -283,6 +284,35 @@ ANS. [{id: 1, name:"sachin"}] [{id:1, name:"sach... by
 ### What is libuv?
 
 
+{id: 1, name:"sachin"}
+[{id:1, name:"sachin" }, {id:2, name:"sachin" }]
+Const a = { id: 10 }; Const b = a; b.id = 2... by Sunil .
+
+example:[2,7,4,10,11,13,5] target=9 output:[(0,1),(2,6)]
+needs to print index position of the number whose sum value is equal to target  value
+
+2) event loop
+3) stored procedure
+4) node is single thread or multithread and how its work
+5) microservices
+6) node pros and cons
+7) how to upload file in node
+8) express is middleware or not and some example of middleware
+9) what is request and response
+12) how to create api for specific user that he can only access this
+
+1) How the Node.js is different from other technologies?
+2) How the threads allocated in node.js and others?
+3) How do you avoid memory leaks?
+what is bind,call apply?
+what are arrow functions?
+what are ES6 functions and how it is different from ES5?
+
+11.typeof(null)
+12.typeof(typeof(null))
+13.typeof(string)
+14.how to build a api using express
+middleware ,js ques coding ques for coding practice array realted ques , reverse string, withou built in methods
 
 ## 1st -> settimeout 3 sec
 ## 2nd - promise 5 sec
@@ -298,3 +328,5 @@ ANS. [{id: 1, name:"sachin"}] [{id:1, name:"sach... by
 
 1) Map store key value pair  -  Set store only value
 2) Map store duplicate values  -  Set not allow to store duplicate values
+
+# What is Cucumber?

@@ -102,7 +102,7 @@ how can we deploy our app without downtime?
 congnizant
 - Promise
 
-### Punawalefincorp
+## Poonawalefincorp
 1) What is microservice architecture?
 2) How can we implement/split e-commerce website with microservice architecture?
 3) What is middleware?

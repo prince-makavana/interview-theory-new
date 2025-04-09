@@ -1,6 +1,5 @@
 ### Let const keyword
 ### arrow function
-### multiline string
 ### default parameters
 
 ### template literals

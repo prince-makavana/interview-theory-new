@@ -14,7 +14,7 @@
 
 ## Data Patterns with examples below
 
-1. Singleton Pattern
+1. ## Singleton Pattern
 - Ensures only one instance of a class exists and provides a global point of access.
 
 ```
@@ -37,7 +37,7 @@ const instance2 = new Singleton();
 console.log(instance1 === instance2); // true (both are the same instance)
 ```
 
-2. Factory Pattern
+2. ## Factory Pattern
 - Creates objects without specifying the exact class of the object.
 
 ```
@@ -58,7 +58,7 @@ const car1 = CarFactory.createCar("Toyota", "Corolla");
 console.log(car1); // Car { brand: 'Toyota', model: 'Corolla' }
 ```
 
-3. Prototype Pattern
+3. ## Prototype Pattern
 - Creates new objects using an existing object as a prototype.
 
 ```
@@ -73,7 +73,7 @@ car1.brand = "Toyota";
 car1.drive(); // Toyota is driving
 ```
 
-4. Builder Pattern
+4. ## Builder Pattern
 - Used to construct complex objects step by step.
 
 ```
@@ -109,7 +109,7 @@ const car = new CarBuilder().setBrand("Tesla").setModel("Model X").build();
 console.log(car); // Car { brand: 'Tesla', model: 'Model X' }
 ```
 
-5. Observer Pattern
+5. ## Observer Pattern
 - Allows objects (observers) to listen for state changes in another object (subject).
 
 ```
@@ -150,7 +150,7 @@ subject.notify("Hello Observers!");
 //         Received: Hello Observers!
 ```
 
-6. Decorator Pattern
+6. ## Decorator Pattern
 - Dynamically adds behavior to objects.
 
 ```
@@ -180,7 +180,7 @@ sportsCar.drive();
 // Adding sport mode!
 ```
 
-7. Adapter Pattern
+7. ## Adapter Pattern
 - Allows incompatible interfaces to work together.
 
 ```
@@ -213,7 +213,7 @@ const adapter = new Adapter(oldSystem);
 console.log(adapter.getData()); // Data from old system
 ```
 
-8. Strategy Pattern
+8. ## Strategy Pattern
 - Defines a family of algorithms and lets clients choose one at runtime
 
 ```
@@ -247,7 +247,7 @@ const paypal = new PaymentContext(new PayPalPayment());
 paypal.pay(200); // Paid $200 using PayPal
 ```
 
-9. Repository Pattern
+9. ## Repository Pattern
 - Separates business logic from database logic
 
 ```
@@ -271,7 +271,7 @@ userRepo.addUser({ name: "John", age: 30 });
 console.log(userRepo.getAllUsers()); // [ { name: 'John', age: 30 } ]
 ```
 
-10. Mediator Pattern
+10. ## Mediator Pattern
 - Encapsulates how a set of objects interact
 
 ```
