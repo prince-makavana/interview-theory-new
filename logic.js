@@ -69,12 +69,10 @@ function findMinMax(arr) {
 
 // Print number every after 1 sec, 2 sec, 3 sec and so on
 function printNumber() {
-  let sum = 0
   for (let i = 1; i < 10; i++) {
-    sum += i
     setTimeout(() => {
       console.log('===printNumber====', i);
-    }, sum * 1000);
+    }, i * 1000);
   }
 }
 // printNumber()
@@ -372,3 +370,80 @@ function longestSubstring(str) {
 }
 
 // console.log(longestSubstring('PriPPrincePrin'))
+
+//  Find nearest to zero value
+const newArr = [2, 5, 9, -3, 6, -4]
+
+function findNearestToZero(arr) {
+    const resArr = [];
+    const sumOfValues = [];
+    for(let i = 0; i < arr.length; i++) {
+        for(let j = i+1; j < arr.length; j++) {
+            sumOfValues.push(arr[i] + arr[j])
+            resArr.push([arr[i], arr[j]])
+        }
+    }
+    const nearestToZero = [1,-1]
+    const nearestIndex = sumOfValues.findindex((value) => nearestToZero.includes(value))
+    return resArr[nearestIndex]
+}
+
+console.log(findNearestToZero(newArr))
+
+
+//  Find highest n number of value
+const intArr = [2,5,10,3,8,1,11,2,5,3]
+
+function findnthHighestValue(arr, nthHighestValue) {
+    const resSet = new Set(arr)
+    const uniqueArr = [...resSet]
+    return uniqueArr.sort((a,b) => b-a)[nthHighestValue-1]
+}
+
+console.log(findnthHighestValue(intArr, 5))
+
+
+/**
+ * GSPANN practical
+ */
+
+let itemsToDelete = ['name_id', 'user_id', 'givenname', 'sn']; 
+let data = {  
+      "user":{ 
+         "name_id":"maruthi", 
+         "session_index":"f5afcc-a608-4398", 
+         "role":"Tester", 
+         "attributes":{ 
+            "identity/claims/user_id":["maruthi"], 
+            "identity/claims/role":[ 
+               "Tester", 
+               "Developer", 
+               "DevOpsEngineer", 
+               "Manager" 
+            ], 
+            "identity/claims/givenname":["Kumar"], 
+            "identity/claims/sn":["Venkata"], 
+            "identity/claims/jobnumber":[ "5002857956778873"] 
+         } 
+      } 
+    }; 
+
+const resObj = {}
+function removeValues(obj, key) {
+    if(typeof obj !== 'object') {
+        key && (resObj[key] = obj)
+    } else {
+        for(let key in obj) {
+            console.log(key)
+            if (!itemsToDelete.includes(key)) {
+                resObj[key]
+                removeValues(obj[key], key)
+            }
+        }
+    }
+    return resObj
+}
+
+console.log(removeValues(data))
+ 
+ 

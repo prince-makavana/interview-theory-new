@@ -73,7 +73,7 @@
 
 ### Tek system
 1) types of streams
-2) which aws module that is not specific to the region
+2) which aws module that is not specific to the region - Route 53 and CloudFront
 3) what is NPM
 
 how can i do log after send response

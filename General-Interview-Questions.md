@@ -284,44 +284,17 @@ ANS. [{id: 1, name:"sachin"}] [{id:1, name:"sach... by
 
 
 
-# 1st -> settimeout 3 sec
-# 2nd - promise 5 sec
-# 3 -> 8 to 10 sec
+## 1st -> settimeout 3 sec
+## 2nd - promise 5 sec
+## 3rd -> 8 to 10 sec
 
+# Execution Order
+1) Blocking code
+2) Promises
+3) Settimeout
+4) I/O operations
 
-## Find nearest to zero value
-const intArr = [2, 5, 9, -3, 6, -4]
+# What is the difference between new Map and Set?
 
-function findNearestToZero(arr) {
-    const resArr = [];
-    const sumOfValues = [];
-    for(let i = 0; i < arr.length; i++) {
-        for(let j = i+1; j < arr.length; j++) {
-            sumOfValues.push(arr[i] + arr[j])
-            resArr.push([arr[i], arr[j]])
-        }
-    }
-    const nearestToZero = [1,-1]
-    const nearestIndex = sumOfValues.filter((value, index) => {
-        if (nearestToZero.includes(value)) {
-            // console.log('nearestIndex', index)
-            return index
-        }
-    })
-    console.log(nearestIndex)
-    return resArr[nearestIndex]
-}
-
-console.log(findNearestToZero(intArr))
-
-
-## Find highest n number of value
-const intArr = [2,5,10,3,8,1,11,2,5,3]
-
-function findnthHighestValue(arr, nthHighestValue) {
-    const resSet = new Set(arr)
-    const uniqueArr = [...resSet]
-    return uniqueArr.sort((a,b) => b-a)[nthHighestValue-1]
-}
-
-console.log(findnthHighestValue(intArr, 5))
+1) Map store key value pair  -  Set store only value
+2) Map store duplicate values  -  Set not allow to store duplicate values
