@@ -4,8 +4,8 @@
  * All TYPE OF PROMISES OBSERVATION
  * 
  * Promise.all - return error only | return all resolved promises
- * Promise.any - return if any one first promises are resolve
  * Promise.allSettled - return all promises with status if resolved or rejected
+ * Promise.any - return if any one first promises are resolve
  * Promise.race - What ever first promise resolve/rejected return that
  * 
  * Promise status as below

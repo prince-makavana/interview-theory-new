@@ -75,3 +75,6 @@
 6)  what is singleton class?
 7) What is object?
 8) Object methods?
+
+9) How many types functions in nodejs? and difference of it?
+10) What is threadpool and how it work behind?

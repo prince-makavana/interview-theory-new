@@ -445,5 +445,60 @@ function removeValues(obj, key) {
 }
 
 console.log(removeValues(data))
+
+
+function mergeSortedArrays(arr1, arr2) {
+  let merged = [];
+  let i = 0, j = 0;
+
+  while (i < arr1.length && j < arr2.length) {
+    if (arr1[i] < arr2[j]) {
+      merged.push(arr1[i]);
+      i++;
+    } else {
+      merged.push(arr2[j]);
+      j++;
+    }
+  }
+
+  while (i < arr1.length) {
+    merged.push(arr1[i]);
+    i++;
+  }
+
+  while (j < arr2.length) {
+    merged.push(arr2[j]);
+    j++;
+  }
+
+  return merged;
+}
+
+const array1 = [1, 3, 5];
+const array2 = [2, 4, 6];
+console.log(mergeSortedArrays(array1, array2));  // Output: [1, 2, 3, 4, 5, 6]
+
  
- 
+const findPrimenumber = () => {
+  const min = 23;
+  const max = 97;
+  const primeNumber = [];
+  let currentVal = min;
+  let isPrimeNumber = false;
+
+  while(currentVal <= max) {
+    for(let i = 2;i < currentVal; i++) {
+      if(currentVal%i !== 0) {
+          isPrimeNumber = true;
+      } else {
+          isPrimeNumber = false;
+          break;
+      }
+    }
+    isPrimeNumber && primeNumber.push(currentVal);
+    currentVal++
+  }
+  return primeNumber;
+}
+
+console.log(findPrimenumber())
