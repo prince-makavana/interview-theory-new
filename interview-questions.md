@@ -125,3 +125,10 @@ console.log(arr3)
 9) Javascript is single threaded or multi threaded?
 10) Javascript is single threaded then how its works?
 11) What is Higher order function?
+
+## Davies
+1) How can we invalidate token?
+2) If we remove token from redis then user pass it to API it will work?
+3) What is the difference between SNS and SQS?
+4) what is the difference between RESTAPI and SOAP?
+5) How we can constantly 
