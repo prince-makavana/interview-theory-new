@@ -502,3 +502,7 @@ const findPrimenumber = () => {
 }
 
 console.log(findPrimenumber())
+
+## Nuvento
+1) reverseString with small all other character and first latter only should capital
+2) find second smallest value from array
