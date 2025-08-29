@@ -106,7 +106,7 @@ congnizant
 1) What is microservice architecture?
 2) How can we implement/split e-commerce website with microservice architecture?
 3) What is middleware?
-4) Ouput or below code
+4) Ouput of below code
 var x = 0;
 for (let i = 0; i < 5; i++) {
   setTimeout(() => {
@@ -128,7 +128,74 @@ console.log(arr3)
 
 ## Davies
 1) How can we invalidate token?
+- Blacklist
 2) If we remove token from redis then user pass it to API it will work?
 3) What is the difference between SNS and SQS?
 4) what is the difference between RESTAPI and SOAP?
-5) How we can constantly 
+5) How we can constantly
+
+## hein+fricke
+1) What is Dockerhub?
+- Docker Hub provides instant access to pre-built, ready-to-use container images.
+2) What is VPC?
+3) What is containerization?
+- In Docker, a container is a runnable instance of a Docker image
+4) What is ECS and EKS?
+5) How to call lambda functions?
+- API Gateway, S3, AWS CLI, AWS SDK, SNS, SQS
+6) What is ELB?
+- It's a service that automatically distributes incoming application traffic across multiple targets
+7) What is volume in docker?
+8) What is kinesis?
+9) How can I implement load balancer in docker?
+- nginx, 
+
+## Turing
+1) Why lambda service called serverless?
+2) What is the usecase of IAm?
+3) [1,1,2,2,2,3,4,4,5,5,5,5,6] give count of number of n with better time and space complexity.
+4) Create one api gateway integrate it with lambda functions and return simple string.
+5) What is the use of subnet in VPC?
+6) Binary search
+
+## LTIMindtree 26/08/2025 | First Round
+1) What is the difference between worker thread and child processes?
+2) How to optimize docker?
+3) What is the difference between docker image and container?
+4) How to add alarm on cloudwatchlogs while add throttling on dynamodb?
+5) Large JSON coming so how can we handle it in nodejs? // LEARN .pipe
+6) What is difference between PM2 and cluster module?
+
+## LTIMindtree 29/08/2025 | Second Round
+1) Output of below code
+- [] === []
+- typeof [] + []
+
+2) Can we trigger lambda from s3?
+3) If we are reading file same time another request is come in same API so will be hold another request since first request busy with reading large file?
+4) Use of Process?
+5) What is the difference between class and interface interms of types?
+6) How many different types is there in typescript with compare to javascript?
+7) What is the tsconfig in typescript?
+8) We have implemented interface in typescript then we will compile it to javascript then how it will convert?
+9) libuv
+10) How can we find os of project in nodejs?
+11) What is the maximum and minimum timeout of lambda function?
+12) How much large file we can upload in s3?
+13) How many ways we can upload file in s3 using programatically?
+
+Ex.
+---------
+
+fs.createReadStream('large_data.json')
+  .pipe(JSONStream.parse('*')) // Parse each element of a root array
+  .on('data', function (data) {
+    // Process each JSON object as it becomes available
+    console.log('Received object:', data);
+  })
+  .on('end', function () {
+    console.log('Finished processing JSON stream.');
+  })
+  .on('error', function (err) {
+    console.error('Error during JSON parsing:', err);
+  });

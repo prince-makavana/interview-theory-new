@@ -502,3 +502,36 @@ const findPrimenumber = () => {
 }
 
 console.log(findPrimenumber())
+
+// Twitter shows trends in order to make its users aware of the trending news. These trends are nothing but trending hashtags that the users are tweeting about.
+// Given a list of N tweets, your task is to find top the five trending hashtags with the count of occurrences.
+
+const arrValues = ['Donald Trump becomes the 45th #US President',
+'Potentially habitable exoplanet #ProximaB discovered',
+'#RogerFederer wins #US Open for 5th time',
+'#GravitationalWaves detection successful',
+'Traces of liquid water discovered on #Mars',
+'Life Could Survive on Exoplanet #ProximaB',
+'Go go #RogerFederer',
+'Ten ways #ProximaB is different from Earth',
+'ISRO becomes 4th space agency to reach #Mars',
+'#RogerFederer beats #Nadal']
+
+function findMostCommonUsedHashTag(arrTwits) {
+    const resHashTags = [];
+    for (let i = 0; i < arrTwits.length; i++) {
+        const twit = arrTwits[i]
+        const hashTagName = twit.split(' ').filter(val => val.includes('#'))
+        for (const hashTag of hashTagName) {
+            if (resHashTags.find(val => val.name === hashTag)) {
+                const matchHashTag = resHashTags.find(val => val.name === hashTag)
+                matchHashTag.count += 1;
+            } else {
+                resHashTags.push({ name: hashTag, count: 1 })
+            }
+        }
+    }
+    return resHashTags.sort((a, b) => b.count - a.count).splice(0, 4);
+}
+
+// console.log(findMostCommonUsedHashTag(arrValues))
