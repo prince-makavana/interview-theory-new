@@ -173,16 +173,19 @@ console.log(arr3)
 
 2) Can we trigger lambda from s3?
 3) If we are reading file same time another request is come in same API so will be hold another request since first request busy with reading large file?
-4) Use of Process?
+4) Use of Process? -> Global object
 5) What is the difference between class and interface interms of types?
 6) How many different types is there in typescript with compare to javascript?
 7) What is the tsconfig in typescript?
 8) We have implemented interface in typescript then we will compile it to javascript then how it will convert?
 9) libuv
-10) How can we find os of project in nodejs?
-11) What is the maximum and minimum timeout of lambda function?
-12) How much large file we can upload in s3?
+10) How can we find os of project in nodejs? -> OS Module 
+11) What is the maximum and minimum timeout of lambda function? -> 1 Sec - 15 Sec
+12) How much large file we can upload in s3? -> 5 TB, Single PUT operation is 5 GB(Multipart upload allows you to upload an object in parts)
 13) How many ways we can upload file in s3 using programatically?
+  - AWS SDK
+  - Presign URL
+  - S3 TransferManager or Transfer Utility(AWS SDKs)
 
 Ex.
 ---------
