@@ -206,3 +206,42 @@ fs.createReadStream('large_data.json')
 ## Nuvento
 1) reverseString with small all other character and first latter only should capital
 2) find second smallest value from array
+
+## Persistent 10/09/2025
+1) function foo() {
+    let a = b = 0; // with let and var
+    a++;
+    return a;
+}
+ 
+console.log(foo());
+console.log(a);
+console.log(b);
+
+= > OUTPUT
+    - 
+
+2) var x = 58;
+function bar() {
+    console.log(x);
+    var x = 29;
+}
+bar();
+
+= > OUTPUT
+    - undefined
+ 
+3) let array = [];
+for (var i = 0; i < 3; i++) {
+    array[i] = function keepI() {
+        console.log(i);
+        return i;
+    };
+}
+array[0]()
+array[1]()
+array[2]()
+
+= > OUTPUT
+    - with var -> 3 3 3
+    - with let -> 0 1 2
