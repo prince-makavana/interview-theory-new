@@ -280,6 +280,13 @@ a.filter(item=>item.name==="sachin")
 ANS. [{id: 1, name:"sachin"}] [{id:1, name:"sach... by 
 
 ### What is memory leak?
+- ANS. A memory leak is a type of computer error that occurs when a program allocates memory from the operating system but fails to release it when that memory is no longer needed
+
+- ### How Memory Leaks Happen
+- Allocation: A program asks the operating system for a block of memory to store data. 
+- Usage: The program uses this memory for its tasks. 
+- Failure to Release: The program finishes with the memory but doesn't properly deallocate it, or it loses the address of that memory block. 
+- Memory Becomes Unreachable: The memory is still marked as "in use" by the operating system, but the program can no longer access or use it, effectively becoming a "leak". 
 
 ### What is libuv?
 
